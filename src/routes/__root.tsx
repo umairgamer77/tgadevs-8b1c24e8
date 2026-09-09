@@ -106,6 +106,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [
+      {
+        id: "aclib",
+        type: "text/javascript",
+        src: "//acscdn.com/script/aclib.js",
+      },
+      {
+        type: "text/javascript",
+        children: `aclib.runAutoTag({ zoneId: 'a1bzhssma6' });`,
+      },
+    ],
   }),
 
   shellComponent: RootShell,
